@@ -1,0 +1,142 @@
+<!doctype html><html lang="en"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>HomeEase – Smart Home Automation System</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.5.2/flowbite.min.css">
+<link rel="stylesheet" href="style.css">
+
+<style>
+html{scroll-behavior:smooth}
+body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:linear-gradient(180deg,#fffafd 0%,#fff1f7 55%,#fff8fb 100%);color:#3d2935;overflow-x:hidden}
+.hero-motion{position:relative;overflow:hidden;isolation:isolate}
+.hero-motion:before,.hero-motion:after{content:"";position:absolute;border-radius:999px;z-index:-1;animation:orb 7s ease-in-out infinite}
+.hero-motion:before{width:220px;height:220px;right:6%;top:8%;background:rgba(244,114,182,.14)}
+.hero-motion:after{width:140px;height:140px;left:3%;bottom:7%;background:rgba(251,113,133,.1);animation-delay:-3s}
+.float-card{animation:float 4.5s ease-in-out infinite}
+.ticker{overflow:hidden;white-space:nowrap}
+.ticker-track{display:inline-flex;min-width:max-content;animation:ticker 20s linear infinite}
+.ticker:hover .ticker-track{animation-play-state:paused}
+.card-lift{transition:transform .25s ease,box-shadow .25s ease}
+.card-lift:hover{transform:translateY(-6px);box-shadow:0 22px 48px rgba(190,24,93,.12)}
+.active-nav{background:linear-gradient(135deg,#fce7f3,#ffe4e6)!important;color:#be185d!important;border-color:#f9a8d4!important;font-weight:700!important}
+.status-dot{width:9px;height:9px;border-radius:999px;background:#34d399;box-shadow:0 0 0 0 rgba(52,211,153,.45);animation:pulse 2s infinite}
+.switch{position:relative;width:48px;height:26px;display:inline-block}
+.switch input{opacity:0;width:0;height:0}.slider{position:absolute;inset:0;border-radius:999px;background:#cbd5e1;transition:.25s}
+.slider:before{content:"";position:absolute;width:20px;height:20px;left:3px;top:3px;border-radius:50%;background:white;transition:.25s;box-shadow:0 1px 4px rgba(0,0,0,.15)}
+.switch input:checked+.slider{background:#ec4899}.switch input:checked+.slider:before{transform:translateX(22px)}
+@keyframes float{50%{transform:translateY(-10px)}}@keyframes orb{50%{transform:translate(8px,-14px)}}@keyframes ticker{to{transform:translateX(-50%)}}@keyframes pulse{70%{box-shadow:0 0 0 10px rgba(52,211,153,0)}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<header class="sticky top-0 z-50 border-b border-pink-100 bg-[#fff8fb]/95 backdrop-blur">
+  <nav class="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 lg:px-8">
+    <a href="index.html" class="flex items-center gap-3">
+      <span class="grid h-10 w-10 place-items-center rounded-xl bg-gradient-to-br from-pink-500 to-rose-500 font-bold text-white shadow-lg shadow-pink-200">HE</span>
+      <div><div class="font-bold text-slate-900">HomeEase</div><div class="text-xs text-slate-500">Smart Home Automation System</div></div>
+    </a>
+    <button data-menu-button class="rounded-lg border border-pink-200 bg-white p-2 text-slate-700 md:hidden">☰</button>
+    <div class="hidden items-center gap-2 md:flex">
+      <a data-nav="home" href="index.html" class="rounded-full border border-transparent px-4 py-2 text-sm text-slate-700 hover:text-pink-600">Home</a>
+      <a data-nav="about" href="about.html" class="rounded-full border border-transparent px-4 py-2 text-sm text-slate-700 hover:text-pink-600">About</a>
+      <a data-nav="contact" href="contact.html" class="rounded-full border border-transparent px-4 py-2 text-sm text-slate-700 hover:text-pink-600">Contact</a>
+      <a data-nav="signup" href="signup.html" class="rounded-full border border-transparent px-4 py-2 text-sm text-slate-700 hover:text-pink-600">Sign Up</a>
+      <a data-nav="signin" href="signin.html" class="rounded-full border border-slate-900 bg-slate-900 px-4 py-2 text-sm font-semibold text-white">Sign In</a>
+    </div>
+  </nav>
+  <div data-mobile-menu class="hidden border-t border-pink-100 bg-[#fff8fb] px-4 py-4 md:hidden">
+    <div class="grid gap-2">
+      <a data-nav="home" href="index.html" class="rounded-lg border border-transparent px-3 py-2">Home</a>
+      <a data-nav="about" href="about.html" class="rounded-lg border border-transparent px-3 py-2">About</a>
+      <a data-nav="contact" href="contact.html" class="rounded-lg border border-transparent px-3 py-2">Contact</a>
+      <a data-nav="signup" href="signup.html" class="rounded-lg border border-transparent px-3 py-2">Sign Up</a>
+      <a data-nav="signin" href="signin.html" class="rounded-lg border border-transparent px-3 py-2">Sign In</a>
+    </div>
+  </div>
+</header>
+
+<main>
+<section class="hero-motion bg-gradient-to-br from-[#2f1d28] via-[#38232e] to-[#241821] text-white">
+  <div class="mx-auto grid max-w-7xl gap-10 px-4 py-16 lg:grid-cols-2 lg:items-center lg:px-8">
+    <div>
+      <span class="inline-flex rounded-full border border-pink-300/30 bg-pink-400/10 px-4 py-2 text-sm font-medium text-pink-100">Smart Home Automation</span>
+      <h1 class="mt-5 max-w-2xl text-4xl font-black leading-tight sm:text-5xl lg:text-6xl">Comfort, security, and control—made simple.</h1>
+      <p class="mt-5 max-w-xl text-lg leading-8 text-pink-50/75">HomeEase brings lighting, temperature, security, and room controls together in one calm and elegant dashboard.</p>
+      <div class="mt-8 flex flex-wrap gap-3">
+        <a href="#controls" class="rounded-xl bg-pink-500 px-5 py-3 font-semibold text-white shadow-lg shadow-pink-950/20 hover:bg-pink-400">Explore Controls</a>
+        <a href="about.html" class="rounded-xl border border-white/25 px-5 py-3 font-semibold hover:bg-white/10">Learn More</a>
+      </div>
+    </div>
+    <div class="float-card rounded-3xl border border-white/10 bg-white/5 p-6 shadow-2xl backdrop-blur">
+      <div class="flex items-center justify-between">
+        <div><p class="text-xs uppercase tracking-[.2em] text-pink-200">Living Room</p><h2 class="mt-1 text-2xl font-bold">Home Dashboard</h2></div>
+        <div class="flex items-center gap-2 rounded-full bg-white/10 px-3 py-1 text-xs text-emerald-200"><span class="status-dot"></span> Connected</div>
+      </div>
+      <div class="mt-6 grid grid-cols-2 gap-4">
+        <div class="rounded-2xl bg-white/10 p-4"><div class="text-2xl">💡</div><p class="mt-3 text-sm text-pink-100/70">Lights</p><p class="font-semibold">On</p></div>
+        <div class="rounded-2xl bg-white/10 p-4"><div class="text-2xl">🌡️</div><p class="mt-3 text-sm text-pink-100/70">Temperature</p><p class="font-semibold">24°C</p></div>
+        <div class="rounded-2xl bg-white/10 p-4"><div class="text-2xl">🔒</div><p class="mt-3 text-sm text-pink-100/70">Door</p><p class="font-semibold">Locked</p></div>
+        <div class="rounded-2xl bg-white/10 p-4"><div class="text-2xl">📷</div><p class="mt-3 text-sm text-pink-100/70">Camera</p><p class="font-semibold">Active</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="ticker border-y border-pink-200 bg-[#fff6fa] py-3">
+<div class="ticker-track text-sm font-semibold uppercase tracking-[.18em] text-slate-500">
+<span class="mx-8">Smart Lighting</span><span class="mx-8 text-pink-600">Climate Control</span><span class="mx-8">Door Security</span><span class="mx-8 text-rose-500">Home Scenes</span><span class="mx-8">Room Control</span><span class="mx-8 text-pink-600">HomeEase</span>
+<span class="mx-8">Smart Lighting</span><span class="mx-8 text-pink-600">Climate Control</span><span class="mx-8">Door Security</span><span class="mx-8 text-rose-500">Home Scenes</span><span class="mx-8">Room Control</span><span class="mx-8 text-pink-600">HomeEase</span>
+</div></section>
+
+<section class="mx-auto max-w-7xl px-4 pt-8 lg:px-8"><div class="flex items-center gap-3 rounded-2xl border border-pink-200 bg-white/80 p-4 shadow-sm"><div class="grid h-11 w-11 place-items-center rounded-xl bg-pink-100">🏠</div><div><strong class="text-pink-700">Welcome home.</strong> Your main room controls are ready below.</div></div></section>
+
+<section id="controls" class="py-14"><div class="mx-auto max-w-7xl px-4 lg:px-8">
+<div class="mb-8"><p class="font-semibold text-pink-600">Smart Controls</p><h2 class="mt-2 text-3xl font-bold text-slate-900 sm:text-4xl">Everyday home control</h2></div>
+<div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+<article class="card-lift rounded-2xl border border-pink-200 bg-white/80 p-6 shadow-sm"><div class="grid h-12 w-12 place-items-center rounded-xl bg-pink-100 text-2xl">💡</div><h3 class="mt-4 text-lg font-bold">Smart Lighting</h3><p class="mt-2 text-sm text-slate-600">Switch room lights on or off with a simple control.</p></article>
+<article class="card-lift rounded-2xl border border-pink-200 bg-white/80 p-6 shadow-sm"><div class="grid h-12 w-12 place-items-center rounded-xl bg-pink-100 text-2xl">🌡️</div><h3 class="mt-4 text-lg font-bold">Temperature</h3><p class="mt-2 text-sm text-slate-600">Adjust room temperature to your preferred comfort.</p></article>
+<article class="card-lift rounded-2xl border border-pink-200 bg-white/80 p-6 shadow-sm"><div class="grid h-12 w-12 place-items-center rounded-xl bg-pink-100 text-2xl">🔒</div><h3 class="mt-4 text-lg font-bold">Door Lock</h3><p class="mt-2 text-sm text-slate-600">Check and manage the smart door lock status.</p></article>
+<article class="card-lift rounded-2xl border border-pink-200 bg-white/80 p-6 shadow-sm"><div class="grid h-12 w-12 place-items-center rounded-xl bg-pink-100 text-2xl">📷</div><h3 class="mt-4 text-lg font-bold">Security Camera</h3><p class="mt-2 text-sm text-slate-600">Keep camera status visible from the main interface.</p></article>
+</div></div></section>
+
+<section class="bg-[#fff0f6] py-14"><div class="mx-auto max-w-7xl px-4 lg:px-8"><div class="text-center"><p class="font-semibold text-rose-500">Rooms</p><h2 class="mt-2 text-3xl font-bold text-slate-900">Control your home room by room</h2></div><div class="mt-8 grid gap-5 md:grid-cols-3">
+<div class="card-lift rounded-2xl border border-pink-200 bg-white p-6 shadow-sm">🛋️<h3 class="mt-4 text-xl font-bold">Living Room</h3><p class="mt-2 text-sm text-slate-600">Lighting, temperature, and entertainment controls.</p></div>
+<div class="card-lift rounded-2xl border border-pink-200 bg-white p-6 shadow-sm">🛏️<h3 class="mt-4 text-xl font-bold">Bedroom</h3><p class="mt-2 text-sm text-slate-600">Comfort and lighting controls for a relaxing room.</p></div>
+<div class="card-lift rounded-2xl border border-pink-200 bg-white p-6 shadow-sm">🍳<h3 class="mt-4 text-xl font-bold">Kitchen</h3><p class="mt-2 text-sm text-slate-600">Lighting and connected appliance controls.</p></div>
+</div></div></section>
+
+<section class="py-14"><div class="mx-auto grid max-w-7xl gap-6 px-4 lg:grid-cols-2 lg:px-8">
+<div class="rounded-3xl bg-[#33212b] p-7 text-white shadow-xl"><p class="text-sm font-semibold text-pink-300">Quick Control</p><h2 class="mt-2 text-3xl font-bold">Living room lights</h2>
+<div class="mt-6 flex items-center justify-between rounded-2xl bg-white/10 p-5"><div><p class="font-semibold">Main Light</p><p class="text-sm text-pink-100/60">Living Room</p></div><label class="switch"><input type="checkbox" checked><span class="slider"></span></label></div>
+<div class="mt-4 flex items-center justify-between rounded-2xl bg-white/10 p-5"><div><p class="font-semibold">Side Lamp</p><p class="text-sm text-pink-100/60">Living Room</p></div><label class="switch"><input type="checkbox"><span class="slider"></span></label></div></div>
+<div class="rounded-3xl border border-pink-200 bg-white/80 p-7 shadow-sm"><p class="text-sm font-semibold text-pink-600">Climate Control</p><h2 class="mt-2 text-3xl font-bold text-slate-900">Room temperature</h2><div class="mt-6 flex items-end gap-2"><span id="tempValue" class="text-6xl font-black text-pink-600">24°</span><span class="pb-2 text-slate-500">Celsius</span></div><input id="tempRange" type="range" min="16" max="30" value="24" class="mt-7 w-full accent-pink-500"></div>
+</div></section>
+
+<section class="bg-[#33212b] py-14 text-white"><div class="mx-auto max-w-7xl px-4 lg:px-8"><p class="font-semibold text-pink-300">Security</p><h2 class="mt-2 text-3xl font-bold">Home security at a glance</h2><div class="mt-8 grid gap-5 md:grid-cols-3">
+<div class="rounded-2xl border border-white/10 bg-white/5 p-6">🔒<h3 class="mt-4 font-bold">Front Door</h3><p class="mt-2 text-sm text-pink-100/65">Locked and secure</p></div>
+<div class="rounded-2xl border border-white/10 bg-white/5 p-6">📷<h3 class="mt-4 font-bold">Main Camera</h3><p class="mt-2 text-sm text-pink-100/65">Camera is active</p></div>
+<div class="rounded-2xl border border-white/10 bg-white/5 p-6">🔔<h3 class="mt-4 font-bold">Alerts</h3><p class="mt-2 text-sm text-pink-100/65">No new alerts</p></div>
+</div></div></section>
+
+<section class="py-14"><div class="mx-auto max-w-7xl px-4 lg:px-8"><div class="rounded-3xl border border-pink-200 bg-white/80 p-7 shadow-sm"><div class="md:flex md:items-center md:justify-between"><div><p class="font-semibold text-pink-600">Home Scenes</p><h2 class="mt-2 text-2xl font-bold">Choose a mood for your home</h2></div><div class="mt-5 flex flex-wrap gap-3 md:mt-0"><span class="rounded-full bg-pink-100 px-4 py-2 text-sm font-semibold text-pink-800">Good Morning</span><span class="rounded-full bg-rose-100 px-4 py-2 text-sm font-semibold text-rose-700">Movie Night</span><span class="rounded-full bg-fuchsia-100 px-4 py-2 text-sm font-semibold text-fuchsia-700">Relax</span><span class="rounded-full bg-slate-100 px-4 py-2 text-sm font-semibold">Away</span></div></div></div></div></section>
+
+<section class="pb-8"><div class="mx-auto max-w-4xl px-4"><div class="rounded-3xl border border-pink-200 bg-white/80 p-7 text-center shadow-sm"><div class="mx-auto grid h-11 w-11 place-items-center rounded-full bg-pink-100 text-2xl text-pink-600">“</div><blockquote class="mt-4 text-xl font-semibold">A smarter home should feel simple, elegant, comfortable, and easy to control.</blockquote><p class="mt-3 text-sm font-medium text-pink-600">HomeEase</p></div></div></section>
+
+<section class="py-14"><div class="mx-auto max-w-4xl px-4"><div class="mb-7 text-center"><p class="font-semibold text-pink-600">FAQ</p><h2 class="mt-2 text-3xl font-bold text-slate-900">Frequently asked questions</h2></div>
+<div id="accordion-collapse" data-accordion="collapse" class="overflow-hidden rounded-2xl border border-pink-200 bg-white/80">
+<h2><button class="flex w-full items-center justify-between border-b border-pink-100 p-5 text-left font-medium text-slate-800" data-accordion-target="#faq1" aria-expanded="true"><span>What can I control from HomeEase?</span><span>⌄</span></button></h2><div id="faq1"><div class="border-b border-pink-100 p-5 text-sm text-slate-600">Lighting, temperature, room controls, door security, camera status, and home scenes.</div></div>
+<h2><button class="flex w-full items-center justify-between p-5 text-left font-medium text-slate-800" data-accordion-target="#faq2" aria-expanded="false"><span>Can I use HomeEase on mobile?</span><span>⌄</span></button></h2><div id="faq2" class="hidden"><div class="p-5 text-sm text-slate-600">Yes. The layout adapts to desktop, tablet, and mobile screens.</div></div>
+</div></div></section>
+
+<section class="pb-16"><div class="mx-auto max-w-7xl px-4 lg:px-8"><div class="rounded-3xl bg-gradient-to-r from-pink-500 to-rose-500 p-8 text-white md:flex md:items-center md:justify-between"><div><p class="text-sm font-semibold text-pink-100">HomeEase</p><h2 class="mt-2 text-3xl font-bold">Create your account</h2><p class="mt-2 text-pink-50">Use the Sign Up page to get started.</p></div><a href="signup.html" class="mt-6 inline-flex rounded-xl bg-white px-5 py-3 font-semibold text-pink-700 md:mt-0">Sign Up</a></div></div></section>
+</main>
+<footer class="mt-14 bg-[#2d1d26] text-pink-50">
+  <div class="mx-auto grid max-w-7xl gap-8 px-4 py-10 md:grid-cols-3 lg:px-8">
+    <div><div class="text-lg font-bold">HomeEase</div><p class="mt-2 text-sm text-pink-100/70">Smart Home Automation System</p></div>
+    <div><div class="font-semibold">Quick Links</div><div class="mt-3 grid gap-2 text-sm text-pink-100/75"><a href="index.html">Home</a><a href="about.html">About</a><a href="contact.html">Contact</a></div></div>
+    <div><div class="font-semibold">Developer</div><p class="mt-3 text-sm text-pink-100/75">Zoha Zafar</p><a href="mailto:zohazafar170@gmail.com" class="text-sm text-pink-300">zohazafar170@gmail.com</a></div>
+  </div>
+  <div class="border-t border-white/10 px-4 py-5 text-center text-xs text-pink-100/60">© 2026 HomeEase. Developed by Zoha Zafar.</div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.5.2/flowbite.min.js"></script><script src="script.js"></script></body></html>
