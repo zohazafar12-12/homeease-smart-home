@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About | HomeEase</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.5.2/flowbite.min.css">
+<link rel="stylesheet" href="../css/style.css"></head>
+<body>
+
+<header class="sticky top-0 z-50 border-b border-pink-100 bg-[#fff8fb]/95 backdrop-blur">
+  <nav class="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 lg:px-8">
+    <a href="../../index.html" class="flex items-center gap-3">
+      <span class="grid h-10 w-10 place-items-center rounded-xl bg-gradient-to-br from-pink-500 to-rose-500 font-bold text-white shadow-lg shadow-pink-200">HE</span>
+      <div>
+        <div class="font-bold text-slate-900">HomeEase</div>
+        <div class="text-xs text-slate-500">Smart Home Automation System</div>
+      </div>
+    </a>
+
+    <button data-menu-button class="rounded-lg border border-pink-200 bg-white/70 p-2 text-slate-700 md:hidden" aria-label="Open menu">☰</button>
+
+    <div class="hidden items-center gap-2 md:flex">
+      <a data-nav="home" href="../../index.html" class="nav-link rounded-full border border-transparent px-4 py-2 text-sm text-slate-700">Home</a>
+      <a data-nav="about" href="about.html" class="nav-link rounded-full border border-transparent px-4 py-2 text-sm text-slate-700">About</a>
+      <a data-nav="contact" href="contact.html" class="nav-link rounded-full border border-transparent px-4 py-2 text-sm text-slate-700">Contact</a>
+      <a data-nav="signup" href="signup.html" class="nav-link rounded-full border border-transparent px-4 py-2 text-sm text-slate-700">Sign Up</a>
+      <a data-nav="signin" href="signin.html" class="nav-link rounded-full border border-slate-900 bg-slate-900 px-4 py-2 text-sm font-semibold text-white">Sign In</a>
+    </div>
+  </nav>
+
+  <div data-mobile-menu class="hidden border-t border-pink-100 bg-[#fff8fb] px-4 py-4 md:hidden">
+    <div class="grid gap-2">
+      <a data-nav="home" href="../../index.html" class="nav-link rounded-lg border border-transparent px-3 py-2">Home</a>
+      <a data-nav="about" href="about.html" class="nav-link rounded-lg border border-transparent px-3 py-2">About</a>
+      <a data-nav="contact" href="contact.html" class="nav-link rounded-lg border border-transparent px-3 py-2">Contact</a>
+      <a data-nav="signup" href="signup.html" class="nav-link rounded-lg border border-transparent px-3 py-2">Sign Up</a>
+      <a data-nav="signin" href="signin.html" class="nav-link rounded-lg border border-transparent px-3 py-2">Sign In</a>
+    </div>
+  </div>
+</header>
+<main>
+  <section class="page-section">
+    <div class="mx-auto max-w-7xl px-4 lg:px-8">
+      <div class="grid gap-8 rounded-3xl bg-[#33212b] p-8 text-white lg:grid-cols-2 lg:items-center">
+        <div><p class="font-semibold text-pink-300">About HomeEase</p><h1 class="mt-2 text-4xl font-black">Simple automation for a comfortable home</h1><p class="mt-5 text-pink-50/70">HomeEase brings common smart-home controls into one elegant interface.</p></div>
+        <div class="rounded-2xl bg-white/8 p-6"><h2 class="text-xl font-bold">Our Focus</h2><p class="mt-3 text-sm leading-6 text-pink-50/70">Simple control, clear navigation, and a calm design for everyday home automation.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Statistics -->
+  <section class="pb-14">
+    <div class="mx-auto grid max-w-7xl gap-5 px-4 md:grid-cols-3 lg:px-8">
+      <div class="soft-card rounded-2xl p-6 text-center"><div class="text-3xl">💡</div><p class="mt-3 font-bold">Lighting Control</p></div>
+      <div class="soft-card rounded-2xl p-6 text-center"><div class="text-3xl">🌡️</div><p class="mt-3 font-bold">Climate Control</p></div>
+      <div class="soft-card rounded-2xl p-6 text-center"><div class="text-3xl">🔒</div><p class="mt-3 font-bold">Home Security</p></div>
+    </div>
+  </section>
+
+  <!-- Timeline -->
+  <section class="page-section bg-[#fff0f6]/70">
+    <div class="mx-auto max-w-4xl px-4">
+      <h2 class="section-title text-3xl font-bold">How HomeEase works</h2>
+      <ol class="relative mt-8 border-s-2 border-pink-200">
+        <li class="mb-8 ms-7"><span class="absolute -start-[11px] grid h-5 w-5 place-items-center rounded-full bg-pink-500 text-[10px] text-white">1</span><h3 class="font-bold">Connect</h3><p class="mt-1 text-sm text-slate-600">Bring common smart-home controls into one interface.</p></li>
+        <li class="mb-8 ms-7"><span class="absolute -start-[11px] grid h-5 w-5 place-items-center rounded-full bg-pink-500 text-[10px] text-white">2</span><h3 class="font-bold">Control</h3><p class="mt-1 text-sm text-slate-600">Manage lighting, climate, and security from clear sections.</p></li>
+        <li class="ms-7"><span class="absolute -start-[11px] grid h-5 w-5 place-items-center rounded-full bg-pink-500 text-[10px] text-white">3</span><h3 class="font-bold">Simplify</h3><p class="mt-1 text-sm text-slate-600">Keep everyday smart-home tasks easy to find and use.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- Team/Developer -->
+  <section class="page-section">
+    <div class="mx-auto max-w-4xl px-4">
+      <div class="soft-card rounded-3xl p-8 text-center">
+        <p class="font-semibold text-pink-600">Developer</p>
+        <div class="mx-auto mt-4 grid h-20 w-20 place-items-center rounded-full bg-gradient-to-br from-pink-500 to-rose-500 text-2xl font-bold text-white">ZZ</div>
+        <h2 class="mt-4 text-2xl font-bold">Zoha Zafar</h2>
+        <a href="mailto:zohazafar170@gmail.com" class="mt-2 inline-block text-sm font-medium text-pink-600">zohazafar170@gmail.com</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonial -->
+  <section class="pb-10">
+    <div class="mx-auto max-w-4xl px-4">
+      <div class="rounded-3xl bg-[#33212b] p-8 text-center text-white"><div class="quote-mark mx-auto">“</div><p class="mt-4 text-xl font-semibold">Good smart-home design should feel simple, calm, and easy to understand.</p><p class="mt-3 text-sm text-pink-300">HomeEase</p></div>
+    </div>
+  </section>
+
+  <!-- Accordion -->
+  <section class="page-section">
+    <div class="mx-auto max-w-4xl px-4">
+      <h2 class="section-title text-3xl font-bold">About HomeEase</h2>
+      <div class="mt-7 overflow-hidden rounded-2xl border border-pink-200 bg-white/70" data-accordion="collapse">
+        <button class="flex w-full justify-between border-b border-pink-100 p-5 text-left font-medium" data-accordion-target="#about1" aria-expanded="true"><span>What is HomeEase?</span><span>⌄</span></button>
+        <div id="about1"><div class="border-b border-pink-100 p-5 text-sm text-slate-600">HomeEase is a smart-home automation interface for lighting, climate, rooms, and security controls.</div></div>
+        <button class="flex w-full justify-between p-5 text-left font-medium" data-accordion-target="#about2" aria-expanded="false"><span>What is the goal of the website?</span><span>⌄</span></button>
+        <div id="about2" class="hidden"><div class="p-5 text-sm text-slate-600">The goal is to make smart-home controls simple to find and easy to use.</div></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="mt-14 bg-[#2d1d26] text-pink-50">
+  <div class="mx-auto grid max-w-7xl gap-8 px-4 py-10 md:grid-cols-3 lg:px-8">
+    <div>
+      <div class="text-lg font-bold">HomeEase</div>
+      <p class="mt-2 text-sm text-pink-100/70">Smart Home Automation System</p>
+    </div>
+    <div>
+      <div class="font-semibold">Quick Links</div>
+      <div class="mt-3 grid gap-2 text-sm text-pink-100/75">
+        <a href="../../index.html" class="hover:text-white">Home</a>
+        <a href="about.html" class="hover:text-white">About</a>
+        <a href="contact.html" class="hover:text-white">Contact</a>
+      </div>
+    </div>
+    <div>
+      <div class="font-semibold">Developer</div>
+      <p class="mt-3 text-sm text-pink-100/75">Zoha Zafar</p>
+      <a href="mailto:zohazafar170@gmail.com" class="text-sm text-pink-300 hover:text-white">zohazafar170@gmail.com</a>
+    </div>
+  </div>
+  <div class="border-t border-white/10 px-4 py-5 text-center text-xs text-pink-100/60">© 2026 HomeEase. Developed by Zoha Zafar.</div>
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.5.2/flowbite.min.js"></script>
+<script src="../js/script.js"></script>
+</body>
+</html>

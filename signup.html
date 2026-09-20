@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sign Up | HomeEase</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.5.2/flowbite.min.css">
+<link rel="stylesheet" href="../css/style.css"></head>
+<body>
+
+<header class="sticky top-0 z-50 border-b border-pink-100 bg-[#fff8fb]/95 backdrop-blur">
+  <nav class="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 lg:px-8">
+    <a href="../../index.html" class="flex items-center gap-3">
+      <span class="grid h-10 w-10 place-items-center rounded-xl bg-gradient-to-br from-pink-500 to-rose-500 font-bold text-white shadow-lg shadow-pink-200">HE</span>
+      <div>
+        <div class="font-bold text-slate-900">HomeEase</div>
+        <div class="text-xs text-slate-500">Smart Home Automation System</div>
+      </div>
+    </a>
+
+    <button data-menu-button class="rounded-lg border border-pink-200 bg-white/70 p-2 text-slate-700 md:hidden" aria-label="Open menu">☰</button>
+
+    <div class="hidden items-center gap-2 md:flex">
+      <a data-nav="home" href="../../index.html" class="nav-link rounded-full border border-transparent px-4 py-2 text-sm text-slate-700">Home</a>
+      <a data-nav="about" href="about.html" class="nav-link rounded-full border border-transparent px-4 py-2 text-sm text-slate-700">About</a>
+      <a data-nav="contact" href="contact.html" class="nav-link rounded-full border border-transparent px-4 py-2 text-sm text-slate-700">Contact</a>
+      <a data-nav="signup" href="signup.html" class="nav-link rounded-full border border-transparent px-4 py-2 text-sm text-slate-700">Sign Up</a>
+      <a data-nav="signin" href="signin.html" class="nav-link rounded-full border border-slate-900 bg-slate-900 px-4 py-2 text-sm font-semibold text-white">Sign In</a>
+    </div>
+  </nav>
+
+  <div data-mobile-menu class="hidden border-t border-pink-100 bg-[#fff8fb] px-4 py-4 md:hidden">
+    <div class="grid gap-2">
+      <a data-nav="home" href="../../index.html" class="nav-link rounded-lg border border-transparent px-3 py-2">Home</a>
+      <a data-nav="about" href="about.html" class="nav-link rounded-lg border border-transparent px-3 py-2">About</a>
+      <a data-nav="contact" href="contact.html" class="nav-link rounded-lg border border-transparent px-3 py-2">Contact</a>
+      <a data-nav="signup" href="signup.html" class="nav-link rounded-lg border border-transparent px-3 py-2">Sign Up</a>
+      <a data-nav="signin" href="signin.html" class="nav-link rounded-lg border border-transparent px-3 py-2">Sign In</a>
+    </div>
+  </div>
+</header>
+<main class="page-section">
+  <div class="mx-auto max-w-xl px-4">
+    <div class="text-center"><span class="inline-flex rounded-full bg-pink-100 px-3 py-1 text-xs font-semibold text-pink-800">Create Account</span><h1 class="mt-4 text-3xl font-bold">Join HomeEase</h1><p class="mt-2 text-sm text-slate-600">Create your account using the form below.</p></div>
+
+    <form data-validate data-demo="true" class="soft-card mt-8 rounded-3xl p-7" novalidate>
+      <div data-success class="mb-5 hidden rounded-xl border border-emerald-200 bg-emerald-50 p-4 text-sm text-emerald-800">Your information has been validated successfully.</div>
+
+      <div><label class="mb-2 block text-sm font-medium">Full Name</label><input name="fullName" required minlength="3" class="form-focus w-full rounded-xl border border-pink-200 bg-white/80 p-3" placeholder="Your full name"><p data-error-for="fullName" class="mt-1 hidden text-xs text-red-600">Enter your full name.</p></div>
+
+      <div class="mt-5"><label class="mb-2 block text-sm font-medium">Email</label><input name="email" type="email" required class="form-focus w-full rounded-xl border border-pink-200 bg-white/80 p-3" placeholder="name@example.com"><p data-error-for="email" class="mt-1 hidden text-xs text-red-600">Enter a valid email.</p></div>
+
+      <div class="mt-5 grid gap-5 md:grid-cols-2">
+        <div><label class="mb-2 block text-sm font-medium">Password</label><input name="password" type="password" required minlength="8" class="form-focus w-full rounded-xl border border-pink-200 bg-white/80 p-3"><p data-error-for="password" class="mt-1 hidden text-xs text-red-600">Minimum 8 characters.</p></div>
+        <div><label class="mb-2 block text-sm font-medium">Confirm Password</label><input name="confirmPassword" type="password" required minlength="8" class="form-focus w-full rounded-xl border border-pink-200 bg-white/80 p-3"><p data-error-for="confirmPassword" class="mt-1 hidden text-xs text-red-600">Passwords must match.</p></div>
+      </div>
+
+      <div class="mt-5 flex items-center"><input name="terms" type="checkbox" required class="h-4 w-4 rounded border-pink-300 text-pink-600 focus:ring-pink-500"><label class="ms-2 text-sm text-slate-600">I agree to the terms and conditions.</label></div><p data-error-for="terms" class="mt-1 hidden text-xs text-red-600">Please agree before continuing.</p>
+
+      <button type="submit" class="mt-6 w-full rounded-xl bg-[#33212b] px-5 py-3 font-semibold text-white hover:bg-[#442a37]">Sign Up</button>
+      <p class="mt-5 text-center text-sm text-slate-600">Already have an account? <a href="signin.html" class="font-semibold text-pink-600 hover:underline">Sign in.</a></p>
+    </form>
+  </div>
+</main>
+
+<footer class="mt-14 bg-[#2d1d26] text-pink-50">
+  <div class="mx-auto grid max-w-7xl gap-8 px-4 py-10 md:grid-cols-3 lg:px-8">
+    <div>
+      <div class="text-lg font-bold">HomeEase</div>
+      <p class="mt-2 text-sm text-pink-100/70">Smart Home Automation System</p>
+    </div>
+    <div>
+      <div class="font-semibold">Quick Links</div>
+      <div class="mt-3 grid gap-2 text-sm text-pink-100/75">
+        <a href="../../index.html" class="hover:text-white">Home</a>
+        <a href="about.html" class="hover:text-white">About</a>
+        <a href="contact.html" class="hover:text-white">Contact</a>
+      </div>
+    </div>
+    <div>
+      <div class="font-semibold">Developer</div>
+      <p class="mt-3 text-sm text-pink-100/75">Zoha Zafar</p>
+      <a href="mailto:zohazafar170@gmail.com" class="text-sm text-pink-300 hover:text-white">zohazafar170@gmail.com</a>
+    </div>
+  </div>
+  <div class="border-t border-white/10 px-4 py-5 text-center text-xs text-pink-100/60">© 2026 HomeEase. Developed by Zoha Zafar.</div>
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.5.2/flowbite.min.js"></script>
+<script src="../js/script.js"></script>
+</body>
+</html>
